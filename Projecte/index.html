@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Projecte</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--link rel='stylesheet' type='text/css' media='screen' href='main.css'-->
+    <script src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/dadesJS.js"></script>
+    <script type="text/javascript" src="./js/ajax.js"></script>
+    <!-- CABECERAS DEL MAPA -->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <!-- FIN CABECERA DEL MAPA -->
+
+    <link rel="stylesheet" type="text/css" href="./css/estil.css" />
+    <!-- CSS MAPA -->
+    <style>
+        #map {
+            width: 95%;
+            height: 460px;
+            box-shadow: 5px 5px 5px #888;
+        }
+    </style>
+    <!-- CSS MAPA FIN -->
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="formularioCont">
+            <form>
+                <label id="idioma" for="lang">Idioma</label>
+                <select name="lang" id="lang">
+                    <option value="ca">Català</option>
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <br>
+                <label id="nickname1" for="nickname">Nom d'usuari</label>
+                <input type="text" id="nickname"><br>
+                <span id="nomsExistents"></span>
+                <br>
+                <label id="nom1" for="nom">Nom</label>
+                <input type="text" id="nom" required>
+                <br>
+                <label id="dnis" for="dni">DNI</label>
+                <input type="text" id="dni"><br>
+                <span id="dnisExistents"></span>
+                <br>
+
+                <label id="provincias" for="provincia">Província</label>
+                <select id="provincia">
+                    <option selected>-- Selecciona provincia --</option>
+                </select>
+                <br>
+                <label id="municipios" for="municipio">Població</label>
+                <select id="municipio">
+                    <option selected>-- Selecciona municipio --</option>
+                </select>
+                <br>
+                <label id="domicili" for="domicilio">Domicili</label>
+                <input type="text" id="domicilio" required><br>
+                <input type="button" value="Buscar dirección" id="srch_but" name="srch_but" onclick="buscarDire()" />
+                <!--button id="srch_but" onclick="buscarDire()">Buscar</button-->
+                <br>
+
+                <div id="resultadosDiv" style="display:none">
+
+                    <select id="resultadosSelect">
+                        <option selected>-- Selecciona resultados --</option>
+                    </select>
+                    <input type="button" value="Marcar en mapa" id="MarcarDire" name="MarcarDire"
+                        onclick="marcarDireccion()" />
+                    <!--button id="11111" onclick="marcarDireccion()">Marcar</button-->
+                </div>
+
+                <input type="button" value="Entrar en el chat" id="butSub" onclick="enviar()" />
+                <!--disabled="true"-->
+
+            </form>
+
+
+            <div id="error">
+                <img src="./img/loading.gif" id="carga" style="visibility: hidden" />
+                <span id="mensajeError"></span>
+            </div>
+        </div>
+
+        <div id="formularioChat" style="display:none">
+            <p id="userConect"></p>
+            <div id="VentanaChat">
+
+            </div>
+            <br>
+            <form name="publish">
+                <input type="text" id="messageAEnviar" value="Escribe tu mensaje" maxlength="50" />
+                <input type="button" id="botonEnviaMensaje" value="Enviar" />
+            </form>
+        </div>
+
+        <div id="mapaUbicacion">
+            <h1 id="ubicacion">Ubicació</h1>
+            <br>
+            <div id='map'>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

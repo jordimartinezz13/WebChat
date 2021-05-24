@@ -1,0 +1,145 @@
+#container {
+    text-align: left;
+    width: 100%;
+    margin: auto;
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace, Arial;
+}
+
+#map {
+    width: 95%;
+    height: 460px;
+    box-shadow: 5px 5px 5px #888;
+}
+
+#formularioChat {
+    width: 40%;
+    height: 560px;
+    background-color: #CCCCCC;
+    float: left;
+    margin: 10px;
+    margin-right: 0px;
+    padding: 20px;
+    background-color: rgb(158, 158, 158);
+    border-radius: 20px;
+    text-align: center;
+}
+
+#formularioCont {
+    width: 40%;
+    height: 560px;
+    background-color: #CCCCCC;
+    float: left;
+    margin: 10px;
+    margin-right: 0px;
+    padding: 20px;
+    background-color: #888;
+    border-radius: 20px;
+    /*overflow: scroll;*/
+}
+
+#ubicacion {
+    margin-bottom: -15px;
+}
+
+#mapaUbicacion {
+    width: 55%;
+
+    float: right;
+    background-color: #FFFFFF;
+    /*border: #000000 1px solid;
+      */
+}
+
+#formularioCont>form>label {
+    font-size: 0.8em;
+    display: inline-block;
+    width: 90px;
+    font-weight: bold;
+}
+
+#userConect {
+    font-size: 0.8em;
+}
+
+#formularioCont>form>input {
+    margin-top: 20px;
+    width: 250px;
+}
+
+#resultadosSelect {
+    margin-top: 20px;
+    width: 250px;
+}
+
+#provincias {
+    margin-top: 20px;
+}
+
+#municipios {
+    margin-top: 20px;
+}
+
+#formularioCont>form>span {
+    padding-left: 100px;
+}
+
+#butSub {
+    margin-top: 20px;
+    width: 300px;
+}
+
+#srch_but {
+    margin-top: 20px;
+    width: 250px;
+    margin-left: 100px;
+}
+
+#butSub:hover {
+    box-shadow: 5px 5px 5px rgb(53, 53, 53);
+}
+
+#error {
+    margin-top: 20px;
+}
+
+#mensajeError {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(165, 0, 0);
+}
+
+#carga {
+    /*margin-bottom: -25px;*/
+    width: 40px;
+}
+
+#mensaje {
+    text-align: left;
+}
+#mensajeI {
+    /*font-family: Arial, 'Courier New', Courier, monospace;*/
+    font-style:italic;
+    text-align: left;
+}
+#mensajePrivado {
+    color: purple;
+    font-style:italic;
+    text-align: left;
+}
+
+#VentanaChat {
+    padding: 10px;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 80%;
+    background-color: rgb(212, 212, 212);
+}
+
+#messageAEnviar {
+    width: 80%;
+}
